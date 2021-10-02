@@ -1,4 +1,4 @@
 # certificard
 - "Compilado" de todos os projetos feitos da Imersão Dev.
 
-Ainda vou editar isso
+Ainda não foi terminado e a responsividade é menor que zero :]
