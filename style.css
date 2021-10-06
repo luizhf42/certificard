@@ -3,8 +3,9 @@
 * {margin: 0; padding: 0;}
 
 body {
+    width: 100%;
     background: rgb(0,85,17);
-    background: linear-gradient(45deg, #005511 0%, #00c92b 100%);
+    background: linear-gradient(45deg, #005511 0%, #00c92b 100%) no-repeat fixed;
     display: grid;
     place-items: center;
     font-family: 'Open Sans', sans-serif;
@@ -66,9 +67,9 @@ h2 {
 .navbar-list {
     list-style-type: none;
     display: flex;
-    width: 80%;
+    width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .navbar-list-link {
@@ -109,7 +110,7 @@ h2 {
 
 .number-text {
     color: #f2f2f2;
-    font-size: 12px;
+    font-size: .7rem;
     padding: 8px 12px;
     position: absolute;
     font-weight: 500;
@@ -142,16 +143,109 @@ footer {
 
 .github-logo {
     width: 60px;
-    height: 60px;
+    height: auto; 
 }
 
 .codepen-logo {
     width: 65px;
-    height: 65px;
+    height: auto; 
     margin-left: 10px;
 }
 
 .github-logo:hover, .codepen-logo:hover {
     transform: scale(1.1);
     transition: .2s;
+}
+
+@media screen and (max-width: 818px) {
+    main {
+        width: 90%;
+    }
+    
+    .navbar-list {
+        justify-content: space-around;
+    }
+
+    .navbar-list-link {
+        font-size: 1rem;
+    }
+
+    .github-logo {
+        width: 53px;
+    }
+
+    .codepen-logo {
+        width: 58px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .navbar-list-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .navbar {
+        width: 50%;
+        margin: 1rem auto;
+    }
+    
+    .navbar-list {
+        flex-direction: column;
+    }
+
+    .navbar-list-link {
+        padding: 2px 0;
+    }
+
+    .slideshow {
+        margin: .8rem;
+    }
+
+    .github-logo {
+        width: 48px;
+    }
+
+    .codepen-logo {
+        width: 53px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .profile p {
+        font-size: .9rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .navbar-list-link {
+        font-size: 0.8rem;
+    }
+
+    .github-logo {
+        width: 43px;
+    }
+
+    .codepen-logo {
+        width: 48px;
+    }
+}
+
+@media screen and (min-height: 790px) {
+    body {
+        height: 100vh;
+    }
 }
